@@ -2,6 +2,8 @@
   "name": "pictobook",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "main": "dist/index.js",
   "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -17,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public --docs",
@@ -54,6 +56,20 @@
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.27",
     "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "react-is": "^17.0.1"
-  }
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
+  "description": "Icons in storybook: display, copy, download",
+  "repository": "https://github.com/obulat/pictobook.git",
+  "author": "Olga Bulat <obulat@gmail.com>"
 }
