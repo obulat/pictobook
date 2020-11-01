@@ -1,0 +1,85 @@
+import {Canvas, Meta,} from '@storybook/addon-docs/blocks';
+import {IconSet} from "../icon-set";
+
+<Meta title="Example/Pictobook Usage" />
+
+# Welcome to Pictobook
+
+Pictobook is an icon gallery for Storybook with options of downloading the icon svg file, copying icon's name or its svg string.
+It is build for Creative Commons Vocabulary design system, and heavily based on
+[**storybook-icon-gallery**](https://github.com/gsoft-inc/storybook-icon-gallery)
+and [**hero-icons**](https://github.com/tailwindlabs/heroicons.com).
+
+## Installation
+
+To use Pictobook, install the package
+
+  ```bash
+  npm i -D pictobook
+  ```
+
+
+and then use it in your code:
+
+```js
+import { IconSet } from 'pictobook'
+<IconSet icons={['cc-logo', 'cc-heart']} />
+```
+
+## IconSet
+
+<Canvas>
+  <IconSet icons={['cc-logo', 'cc-heart']} />
+</Canvas>
+
+## Props
+
+If you want to change the way icon's name is displayed, you can pass a callback as `getDisplayName`:
+
+export const icons = ['cc-logo', 'cc-by', 'cc-heart']
+
+### Display name
+
+```javascript
+const getDisplayName = (name) => `pictobook-${name.toUpperCase()}.svg`
+
+<IconSet icons={['cc-logo', 'cc-heart']} getDisplayName={getDisplayName} />
+```
+
+export const getDisplayName = (name) => `pictobook-${name.toUpperCase()}.svg`
+
+<Canvas>
+  <IconSet icons={icons} getDisplayName={getDisplayName} />
+</Canvas>
+
+### Copy value
+
+If you want to change what's being copied when you click on `Copy Name` button, you can pass
+`getCopyValue` callback as prop:
+
+```javascript
+
+const getCopyValue = (name)=>`path/to/icon/${name}.svg`
+<IconSet icons={['cc-logo', 'cc-heart']} getCopyValue={getCopyValue} />
+```
+
+export const getCopyValue = (name)=>`path/to/icon/${name}.svg`
+
+<Canvas>
+  <IconSet icons={icons} getCopyValue={getCopyValue} />
+</Canvas>
+
+### Icon class
+
+If you want to apply some styling to all icons in a set, you can add a class to it by using an `IconClass` prop:
+
+
+```javascript
+
+<IconSet icons={['cc-logo', 'cc-heart']} iconClass="large has-background-white" />
+```
+
+
+<Canvas>
+  <IconSet icons={icons} iconClass="large has-background-white" />
+</Canvas>

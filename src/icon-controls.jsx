@@ -2,7 +2,6 @@ import React from "react";
 
 
 export const IconControls = ({ iconSvg, context }) => {
-  console.log('CONTROLS: ', iconSvg, context)
   const {copyValue} = context
   // state can be "idle"/"copied"/"active"
   const [state, setState] = React.useState("idle");
@@ -38,7 +37,6 @@ export const IconControls = ({ iconSvg, context }) => {
     function perform(action) {
       if (state === "copied") {return;}
       if (action === "download") {
-        console.log('Action download, ', iconSvg);
         // Create a link element
         const link = document.createElement("a");
         link.type = "image/svg+xml";

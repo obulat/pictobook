@@ -65,6 +65,176 @@ import Sliders from "!raw-loader!./svg/symbols/sliders.svg";
 import Sort from "!raw-loader!./svg/symbols/sort.svg";
 import Times from "!raw-loader!./svg/symbols/times.svg";
 
+const angles = [ChevronUp, ChevronDown, ChevronLeft, ChevronRight,
+  AngleUp, AngleDown, AngleLeft, AngleRight,
+  CaretUp, CaretDown, CaretLeft, CaretRight]
+const cc = [CcBy, CcHeart, CcHeartFilled, CcLogo, CcNc,
+  CcNcEu, CcNcJp, CcNd, CcPd, CcPdm, CcRemix,
+  CcSa, CcSampling, CcSamplingPlus, CcShare, CcZero]
+const symbols = [ Whatsapp, Adjust, Bars, BookmarkRegular, BookmarkSolid,
+  Calendar, Check, CircleFilled, CircleOutline, Envelope,
+  Exclamation, ExternalLink, Filter, Flag, Globe, Heart,
+  Info, Minus, Plus, Question, Search, Sliders, Sort, Times]
+const socialMedia = [Facebook, Github, Instagram, Linkedin, Medium, Messenger,
+  Pinterest, Reddit, Rss, Slack, Sms, Tumbler, Twitter]
+
+const iconGroups = {
+  'arrows': {
+    'chevrons': {
+      'chevron-up': ChevronUp,
+      'chevron-down': ChevronDown,
+      'chevron-left':ChevronLeft,
+      'chevron-right':ChevronRight
+    },
+    'angles': {
+      'angle-up': AngleUp,
+      'angle-down': AngleDown,
+      'angle-left': AngleLeft,
+      'angle-right': AngleRight
+    },
+    'carets': {
+      'caret-up': CaretUp,
+      'caret-down': CaretDown,
+      'caret-left': CaretLeft,
+      'caret-right': CaretRight
+    }
+  },
+  'symbols': {
+    'shapes': {
+      tick: Check,
+      cross: Times,
+      plus: Plus,
+      minus: Minus,
+      'circle-filled': CircleFilled,
+      'circle-outline': CircleOutline
+    },
+    'hieroglyphs': {
+     'globe': Globe,
+      'info': Info,
+      'exclamation': Exclamation,
+      'external-link': ExternalLink,
+      'search': Search,
+      'sort': Sort,
+      'filter': Filter,
+      'sliders': Sliders,
+      'flag': Flag,
+      'question': Question,
+      'adjust': Adjust,
+      'bookmark-regular': BookmarkRegular,
+      'bookmark-solid': BookmarkSolid,
+      'bars': Bars,
+      'envelope': Envelope,
+      'rss': Rss,
+      'heart': Heart
+    }
+  },
+  'cc-licenses': {
+    'standard': {
+      'cc-zero': CcZero,
+      'cc-sa': CcSa,
+      'cc-nc': CcNc,
+      'cc-logo': CcLogo,
+      'cc-pd': CcPd,
+      'cc-by': CcBy,
+      'cc-nd': CcNd
+    },
+    'non-standard': {
+      'cc-sampling': CcSampling,
+      'cc-sampling-plus': CcSamplingPlus,
+      'cc-remix': CcRemix,
+      'cc-share': CcShare,
+      'cc-nc-eu': CcNcEu,
+      'cc-nc-jp': CcNcJp,
+      'cc-pd-alt': CcPdm,
+      'cc-heart': CcHeart,
+      'cc-heart-filled': CcHeartFilled
+    }
+  },
+  'social-media': {
+    'facebook': Facebook,
+    'github': Github,
+    'instagram': Instagram,
+    'linkedin': Linkedin,
+    'medium': Medium,
+    'messenger': Messenger,
+    'pinterest': Pinterest,
+    'reddit': Reddit,
+    'rss': Rss,
+    'slack': Slack,
+    'sms': Sms,
+    'tumbler': Tumbler,
+    'twitter': Twitter,
+    'whatsapp': Whatsapp
+  },
+}
+
+const iconFiles = {
+  'chevron-up': ChevronUp,
+  'chevron-down': ChevronDown,
+  'chevron-left':ChevronLeft,
+  'chevron-right':ChevronRight,
+  'angle-up': AngleUp,
+  'angle-down': AngleDown,
+  'angle-left': AngleLeft,
+  'angle-right': AngleRight,
+  'caret-up': CaretUp,
+  'caret-down': CaretDown,
+  'caret-left': CaretLeft,
+  'caret-right': CaretRight,
+  tick: Check,
+  cross: Times,
+  plus: Plus,
+  minus: Minus,
+  'circle-filled': CircleFilled,
+  'circle-outline': CircleOutline,
+  'globe': Globe,
+  'info': Info,
+  'exclamation': Exclamation,
+  'external-link': ExternalLink,
+  'search': Search,
+  'sort': Sort,
+  'filter': Filter,
+  'sliders': Sliders,
+  'flag': Flag,
+  'question': Question,
+  'adjust': Adjust,
+  'bookmark-regular': BookmarkRegular,
+  'bookmark-solid': BookmarkSolid,
+  'bars': Bars,
+  'envelope': Envelope,
+  'heart': Heart,
+  'cc-zero': CcZero,
+  'cc-sa': CcSa,
+  'cc-nc': CcNc,
+  'cc-logo': CcLogo,
+  'cc-pd': CcPd,
+  'cc-by': CcBy,
+  'cc-nd': CcNd,
+  'cc-sampling': CcSampling,
+  'cc-sampling-plus': CcSamplingPlus,
+  'cc-remix': CcRemix,
+  'cc-share': CcShare,
+  'cc-nc-eu': CcNcEu,
+  'cc-nc-jp': CcNcJp,
+  'cc-pd-alt': CcPdm,
+  'cc-heart': CcHeart,
+  'cc-heart-filled': CcHeartFilled,
+  'facebook': Facebook,
+  'github': Github,
+  'instagram': Instagram,
+  'linkedin': Linkedin,
+  'medium': Medium,
+  'messenger': Messenger,
+  'pinterest': Pinterest,
+  'reddit': Reddit,
+  'rss': Rss,
+  'slack': Slack,
+  'sms': Sms,
+  'tumbler': Tumbler,
+  'twitter': Twitter,
+  'whatsapp': Whatsapp
+}
+
 export { ChevronUp, ChevronDown, ChevronLeft, ChevronRight,
   AngleUp, AngleDown, AngleLeft, AngleRight,
   CaretUp, CaretDown, CaretLeft, CaretRight,
@@ -77,4 +247,5 @@ export { ChevronUp, ChevronDown, ChevronLeft, ChevronRight,
   Calendar, Check, CircleFilled, CircleOutline, Envelope,
   Exclamation, ExternalLink, Filter, Flag, Globe, Heart,
   Info, Minus, Plus, Question, Search, Sliders, Sort, Times,
+  angles, cc, symbols, socialMedia, iconFiles, iconGroups
 }

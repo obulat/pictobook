@@ -1,0 +1,80 @@
+import {Canvas, Meta,} from '@storybook/addon-docs/blocks';
+import {IconSet} from "../icon-set";
+import { iconGroups } from "../assets";
+
+<Meta title="Example/Vocabulary Icons" />
+
+# Vocabulary icons
+
+## Arrows
+
+### Angles
+
+export const angles = Object.keys(iconGroups.arrows.angles)
+
+<Canvas>
+  <IconSet icons={angles} />
+</Canvas>
+
+### Carets
+
+export const carets = Object.keys(iconGroups.arrows.carets)
+
+<Canvas>
+  <IconSet icons={angles} />
+</Canvas>
+
+### Chevrons
+
+export const chevrons = Object.keys(iconGroups.arrows.chevrons)
+
+<Canvas>
+  <IconSet icons={chevrons} />
+</Canvas>
+
+
+## CC Icons
+
+### Standard
+
+export const standardCCIcons = Object.keys(iconGroups['cc-licenses'].standard)
+
+<Canvas>
+<div>
+  <IconSet icons={standardCCIcons} />
+</div>
+</Canvas>
+
+### NonStandard
+
+export const nonstandardCC = Object.keys(iconGroups['cc-licenses']["non-standard"])
+
+<Canvas>
+  <IconSet icons={nonstandardCC} />
+</Canvas>
+
+## Social Media
+
+export const socialMedia = Object.keys(iconGroups['social-media'])
+
+<Canvas>
+  <IconSet icons={socialMedia} />
+</Canvas>
+
+## Symbols
+
+### Shapes
+
+export const shapes = Object.keys(iconGroups.symbols.shapes)
+
+<Canvas>
+  <IconSet icons={shapes} />
+</Canvas>
+
+### Hieroglyphs
+
+export const hieroglyphs = Object.keys(iconGroups.symbols.hieroglyphs)
+
+<Canvas>
+  <IconSet icons={hieroglyphs} />
+</Canvas>

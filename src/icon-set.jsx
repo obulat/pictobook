@@ -4,12 +4,12 @@ import {IconWrapper} from './icon-wrapper';
 const defaultDisplayNameGetter = (iconName) => iconName;
 const defaultCopyValueGetter = (iconName) => `${iconName}.svg`;
 
-export function IconSet({icons, getDisplayName, getCopyValue}) {
-  getDisplayName = getDisplayName || defaultDisplayNameGetter
-  getCopyValue = getCopyValue || defaultCopyValueGetter
+export function IconSet({icons, getDisplayName=defaultDisplayNameGetter, getCopyValue=defaultCopyValueGetter, iconClass=''}) {
+
   const context = {
     getDisplayName,
-    getCopyValue
+    getCopyValue,
+    iconClass
   }
   return (
     <div className="icon-set sbdocs sbdocs-pb">

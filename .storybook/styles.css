@@ -1,0 +1,26 @@
+/* These are styles used within Canvas elements */
+
+.sbdocs-wrapper, .sbdocs.sbdocs-p {
+    font-family: "Nunito Sans",-apple-system,".SFNSText-Regular","San Francisco",
+    BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-overflow-scrolling: touch;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.sbdocs-wrapper .vocabulary-code {
+    word-wrap: anywhere;
+}
+.has-background-white svg {
+    background-image: radial-gradient(circle, #fff 60%, transparent 60%);
+    background-color: transparent !important;
+}
+.icon.large svg {
+    width: 4rem;
+    height: 4rem;
+}
