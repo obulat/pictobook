@@ -1,5 +1,7 @@
-import * as React from "react";
+import React from "react";
 import {IconWrapper} from './icon-wrapper';
+import {IconControls} from "./icon-controls";
+import {IconItem} from "./icon-item";
 
 const defaultDisplayNameGetter = (iconName) => iconName;
 const defaultCopyValueGetter = (iconName) => `${iconName}.svg`;
@@ -20,3 +22,7 @@ export function IconSet({icons, getDisplayName=defaultDisplayNameGetter, getCopy
     </div>
   )
 }
+
+IconSet.Item = IconItem
+IconSet.Controls = IconControls
+IconSet.Wrapper = IconWrapper
